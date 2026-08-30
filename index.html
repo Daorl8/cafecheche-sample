@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>카페 체체 — 보라동 작은 커피·디저트 카페</title>
+<meta name="description" content="경기 용인 보라동의 작은 카페 체체(cheche). 편안한 공간과 맛있는 커피, 수제 디저트로 잠시 쉬어가세요. 체체크림라떼·바스크치즈케이크·수제청 에이드.">
+<meta name="theme-color" content="#C6392C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="카페 체체 — 보라동 작은 커피·디저트 카페">
+<meta property="og:description" content="편안한 공간, 맛있는 커피. 잠시 쉬어가는 보라동 작은 카페 체체.">
+<meta property="og:image" content="https://cafecheche-sample.lgt3232.workers.dev/og-cheche.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://cafecheche-sample.lgt3232.workers.dev/">
+<meta property="og:site_name" content="cafe cheche">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cafecheche-sample.lgt3232.workers.dev/og-cheche.jpg">
+<link rel="canonical" href="https://cafecheche-sample.lgt3232.workers.dev/">
+<link rel="icon" type="image/png" href="logo-cheche.png">
+<link rel="apple-touch-icon" href="logo-cheche.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"카페 체체","alternateName":"cafe cheche","description":"보라동의 작은 커피·디저트 카페. 편안한 공간과 맛있는 커피.","image":"https://cafecheche-sample.lgt3232.workers.dev/cafe-store.webp","url":"https://cafecheche-sample.lgt3232.workers.dev/","servesCuisine":["Coffee","Dessert","Cafe"],"address":{"@type":"PostalAddress","streetAddress":"한보라1로 56 102호","addressLocality":"용인시 기흥구","addressRegion":"경기도","addressCountry":"KR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"11:00","closes":"19:00"}],"sameAs":["https://www.instagram.com/cafe.cheche/"]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+ --paper:#FCF8F2; --paper2:#F5EDDF; --paper3:#EFE4D2; --card:#FFFDF9;
+ --ink:#3B2E29; --ink2:#7C6B60; --faint:#A99A8C;
+ --red:#C6392C; --red-d:#A5302A; --red-soft:#E9C9BF;
+ --line:#EADFCE; --line2:#E0D2BC;
+ --disp:'Gaegu',system-ui,'Apple SD Gothic Neo',sans-serif;
+ --body:'Pretendard Variable',Pretendard,system-ui,-apple-system,'Segoe UI',sans-serif;
+ --bar:66px; --ease:cubic-bezier(.22,.61,.36,1);
+}
+html{color-scheme:light;-webkit-text-size-adjust:100%;scroll-behavior:auto;scroll-padding-top:80px;overflow-x:hidden}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 26px;position:relative}
+.wrap-s{max-width:760px}
+section{position:relative}
+::selection{background:var(--red);color:#fff}
+.disp{font-family:var(--disp)}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.15;letter-spacing:.01em}
+
+/* eyebrow */
+.eyebrow{font-family:var(--disp);font-weight:700;font-size:1.05rem;letter-spacing:.06em;color:var(--red);display:inline-flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:20px;height:2.5px;border-radius:2px;background:var(--red)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--body);font-weight:600;font-size:.95rem;padding:13px 24px;border-radius:100px;transition:transform .18s var(--ease),background .2s,color .2s,border-color .2s;box-sizing:border-box}
+.btn-fill{background:var(--red);color:#fff}
+.btn-fill:hover{transform:translateY(-2px);background:var(--red-d)}
+.btn-ol{background:transparent;color:var(--red-d);border:1.6px solid var(--red-soft)}
+.btn-ol:hover{border-color:var(--red);transform:translateY(-2px)}
+.btn svg{width:17px;height:17px}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s var(--ease),box-shadow .35s,border-color .35s}
+.hdr-in{height:var(--bar);display:flex;align-items:center;justify-content:space-between;padding:0 26px;max-width:1180px;margin:0 auto}
+.brand{display:flex;align-items:center;height:34px}
+.brand img{height:34px;width:auto}
+.nav-r{display:flex;align-items:center;gap:24px}
+.nav-lnk{display:flex;gap:22px}
+.nav-lnk a{font-family:var(--disp);font-weight:700;font-size:1.08rem;color:var(--ink);opacity:.85;transition:color .2s,opacity .2s}
+.nav-lnk a:hover{color:var(--red);opacity:1}
+.hdr .ico{display:inline-flex;color:var(--ink)}
+.hdr .ico svg{width:20px;height:20px}
+.hdr{background:rgba(252,248,242,0)}
+.hdr.scrolled{background:rgba(252,248,242,.95);border-bottom:1px solid var(--line);box-shadow:0 3px 20px rgba(120,80,40,.05)}
+.burger{display:none;flex-direction:column;gap:5px;width:30px;height:30px;justify-content:center;align-items:center;background:none;border:0;cursor:pointer;padding:0}
+.burger span{display:block;width:22px;height:2px;border-radius:2px;background:var(--ink);transition:.3s}
+
+/* drawer */
+.drawer{position:fixed;inset:0;z-index:70;background:var(--red);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s}
+.drawer.open{opacity:1;visibility:visible}
+.drawer a{font-family:var(--disp);font-weight:700;font-size:2rem;color:#fff;padding:10px}
+.drawer .dx{position:absolute;top:20px;right:24px;font-size:2rem;background:none;border:0;color:#fff;cursor:pointer;line-height:1}
+.drawer .dsoc{margin-top:20px;display:flex;gap:18px}
+.drawer .dsoc a{font-size:1rem;font-family:var(--body);opacity:.9}
+
+/* ---------- hero ---------- */
+.hero{padding:calc(var(--bar) + 30px) 0 40px;text-align:center;background:
+  radial-gradient(90% 70% at 50% 0%, #FFFDF9 0%, var(--paper) 60%)}
+.hero .lockup{height:clamp(210px,34vw,320px);width:auto;margin:8px auto 0;filter:drop-shadow(0 8px 20px rgba(160,60,40,.08))}
+.hero .tag{font-family:var(--disp);font-weight:700;font-size:clamp(1.7rem,4.6vw,2.7rem);color:var(--ink);margin-top:18px;line-height:1.3}
+.hero .tag b{color:var(--red)}
+.hero .sub{font-size:clamp(.98rem,1.6vw,1.08rem);color:var(--ink2);margin-top:14px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.75}
+.hero .meta{font-family:var(--disp);font-weight:400;font-size:1.15rem;color:var(--red-d);margin-top:16px;letter-spacing:.02em}
+.hero-cta{margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* hero photo band */
+.band{position:relative;height:clamp(280px,42vw,460px);overflow:hidden;background:var(--paper2)}
+.band img{width:100%;height:100%;object-fit:cover;object-position:50% 58%}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(60,46,41,.12),rgba(60,46,41,0) 30%)}
+
+/* section head */
+.sec{padding:clamp(64px,9vw,110px) 0}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2rem,5vw,3rem);margin-top:12px;color:var(--ink)}
+.sec-head h2 .r{color:var(--red)}
+.sec-head p{font-size:1rem;color:var(--ink2);margin-top:12px;max-width:520px;margin-left:auto;margin-right:auto}
+
+/* ---------- intro ---------- */
+.intro{background:var(--paper)}
+.intro-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.intro-photo{position:relative}
+.intro-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px}
+.intro-photo::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:2px solid var(--red-soft);border-radius:20px;z-index:-1}
+.intro-txt .eyebrow{margin-bottom:16px}
+.intro-txt h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--ink);line-height:1.3}
+.intro-txt h2 .r{color:var(--red)}
+.intro-txt p{margin-top:18px;color:var(--ink2);font-size:1.02rem;line-height:1.85}
+.intro-txt .sign{font-family:var(--disp);font-weight:700;font-size:1.3rem;color:var(--red-d);margin-top:20px}
+
+/* ---------- menu ---------- */
+.menu{background:var(--paper2)}
+.mcats{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+.mcat h3{font-size:1.5rem;color:var(--red);display:flex;align-items:center;gap:10px;margin-bottom:6px;padding-bottom:12px;border-bottom:2px dashed var(--line2)}
+.mrow{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.mrow:last-child{border-bottom:0}
+.mrow .nm{font-family:var(--disp);font-weight:700;font-size:1.18rem;color:var(--ink);white-space:nowrap}
+.mrow .nm .sig{display:inline-block;font-family:var(--body);font-size:.62rem;font-weight:700;color:#fff;background:var(--red);border-radius:100px;padding:2px 7px;vertical-align:middle;margin-left:6px;letter-spacing:.04em}
+.mrow .ds{font-size:.82rem;color:var(--faint);flex:1;line-height:1.4;min-width:0}
+.mrow .pr{font-family:var(--body);font-weight:600;font-size:1rem;color:var(--red-d);white-space:nowrap}
+.mnote{margin-top:26px;text-align:center;font-size:.9rem;color:var(--ink2)}
+.mnote b{color:var(--red-d)}
+
+/* ---------- gallery ---------- */
+.gal{background:var(--paper)}
+.ggrid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(10px,1.4vw,18px)}
+.ggrid figure{overflow:hidden;border-radius:18px;background:var(--paper3);position:relative}
+.ggrid img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.ggrid figure:hover img{transform:scale(1.05)}
+.gt{aspect-ratio:4/5}.gw{aspect-ratio:3/2}.gsq{aspect-ratio:1/1}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
+.gcap{text-align:center;font-family:var(--disp);font-weight:400;font-size:1.15rem;color:var(--ink2);margin-top:28px}
+
+/* ---------- visit ---------- */
+.visit{background:var(--paper2)}
+.visit-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,60px);align-items:start}
+.vcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,3vw,38px);box-shadow:0 10px 30px rgba(150,90,50,.05)}
+.vcard h3{font-size:1.5rem;color:var(--red);margin-bottom:6px}
+.vrow{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.vrow:last-child{border-bottom:0}
+.vrow .k{font-family:var(--disp);font-weight:700;font-size:1.05rem;color:var(--red-d);width:74px;flex-shrink:0}
+.vrow .v{font-size:.98rem;color:var(--ink);line-height:1.7}
+.vrow .v .muted{color:var(--ink2);font-size:.9rem}
+.hours{display:flex;flex-direction:column;gap:5px}
+.hours span{display:flex;justify-content:space-between;gap:16px;font-size:.98rem}
+.hours span .d{font-family:var(--disp);font-weight:700;color:var(--ink)}
+.hours span.today{color:var(--red-d);font-weight:700}
+.vcard .vbtn{margin-top:22px;width:100%;justify-content:center}
+.visit-photo img{width:100%;height:100%;min-height:320px;object-fit:cover;border-radius:22px}
+
+/* ---------- footer ---------- */
+footer{background:var(--red);color:#fff;padding:56px 0 100px;text-align:center}
+footer .flogo{height:64px;margin:0 auto 20px}
+footer .fadr{font-size:.95rem;opacity:.92;line-height:1.8}
+footer .fsoc{margin-top:22px;display:flex;gap:14px;justify-content:center}
+footer .fsoc a{display:inline-flex;align-items:center;gap:7px;font-size:.9rem;background:rgba(255,255,255,.15);padding:9px 18px;border-radius:100px;transition:background .2s}
+footer .fsoc a:hover{background:rgba(255,255,255,.26)}
+footer .fsoc svg{width:16px;height:16px}
+footer .cr{margin-top:26px;font-size:.76rem;opacity:.7}
+
+/* mobile quickbar */
+.qbar{display:none}
+
+/* reveal */
+.rv{opacity:1}
+
+/* responsive */
+@media (max-width:860px){
+ .nav-lnk{display:none}
+ .burger{display:flex}
+ .intro-in{grid-template-columns:1fr;gap:30px}
+ .intro-photo{max-width:400px;margin:0 auto}
+ .mcats{grid-template-columns:1fr;gap:34px}
+ .visit-in{grid-template-columns:1fr;gap:24px}
+ .visit-photo img{min-height:260px}
+ .c3,.c4,.c5{grid-column:span 6}.c6,.c7,.c8{grid-column:span 6}
+ .qbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;gap:9px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
+ .qbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;font-family:var(--body);font-weight:600;font-size:.94rem;padding:12px 0;border-radius:14px}
+ .qbar .qn{background:var(--red);color:#fff}
+ .qbar .qi{background:var(--paper2);color:var(--red-d)}
+ .qbar svg{width:16px;height:16px}
+ body{padding-bottom:64px}
+}
+@media (max-width:520px){
+ .c3,.c4,.c5,.c6,.c7,.c8{grid-column:span 12}
+ .wrap{padding:0 20px}
+ .hours span{font-size:.92rem}
+}
+a:focus-visible,button:focus-visible{outline:2.5px solid var(--red);outline-offset:3px;border-radius:4px}
+footer a:focus-visible,.drawer a:focus-visible,.qbar .qn:focus-visible{outline-color:#fff}
+@media (hover:none){
+ .ggrid figure:hover img{transform:none}
+ .btn:hover,.btn-fill:hover,.btn-ol:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<!-- ===== HEADER ===== -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="#top" aria-label="카페 체체 홈"><img src="logo-word.png" alt="cheche"></a>
+    <div class="nav-r">
+      <nav class="nav-lnk" aria-label="주요 메뉴">
+        <a href="#menu">Menu</a>
+        <a href="#space">Space</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a class="ico" href="https://www.instagram.com/cafe.cheche/" target="_blank" rel="noopener" aria-label="인스타그램">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="dx" id="dx" aria-label="메뉴 닫기">&times;</button>
+  <a href="#menu">Menu</a>
+  <a href="#space">Space</a>
+  <a href="#visit">Visit</a>
+  <div class="dsoc">
+    <a href="https://www.instagram.com/cafe.cheche/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://map.naver.com/p/entry/place/2048910637" target="_blank" rel="noopener">네이버 지도</a>
+  </div>
+</div>
+
+<span id="top"></span>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <img class="lockup" src="logo-cheche.png" alt="카페 체체 — 커피 · 디저트">
+    <p class="tag">잠시 <b>쉬어가는</b> 작은 카페</p>
+    <p class="sub">보라동 골목 안, 편안한 공간과 맛있는 커피로 보답할게요. 편하게 놀러오세요 :)</p>
+    <p class="meta">coffee · dessert · 용인 보라동</p>
+    <div class="hero-cta">
+      <a class="btn btn-fill" href="#menu">메뉴 보기</a>
+      <a class="btn btn-ol" href="https://map.naver.com/p/entry/place/2048910637" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
+        오시는 길
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTO BAND ===== -->
+<div class="band"><img src="cafe-store.webp" alt="카페 체체 가게 앞 — COFFEE · DESSERT 차양" loading="lazy"></div>
+
+<!-- ===== INTRO ===== -->
+<section class="sec intro" id="space">
+  <div class="wrap">
+    <div class="intro-in">
+      <div class="intro-photo rv"><img src="cafe-in2.webp" alt="식물과 따뜻한 조명이 있는 카페 체체 내부" loading="lazy"></div>
+      <div class="intro-txt rv">
+        <span class="eyebrow">cafe cheche</span>
+        <h2>작은 가게에서<br><span class="r">천천히 쉬어가요</span></h2>
+        <p>보라동 행정복지센터 옆, 오밀조밀한 작은 카페 체체입니다. 화려하진 않지만 오래 머물고 싶은 편안한 공간과, 매일 정성껏 내리는 커피와 손수 만든 디저트로 하루의 쉼표가 되어 드릴게요.</p>
+        <p class="sign">— 편하게 놀러오세요 :D</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section class="sec menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Menu</span>
+      <h2>체체의 <span class="r">메뉴</span></h2>
+      <p>모든 커피는 디카페인으로 변경 가능해요 (+500원)</p>
+    </div>
+    <div class="mcats">
+      <div class="mcat rv">
+        <h3>Coffee</h3>
+        <div class="mrow"><span class="nm">체체크림라떼 <span class="sig">SIGNATURE</span></span><span class="ds">고소한 체체 시럽과 크림이 올라간 라떼</span><span class="pr">5,800</span></div>
+        <div class="mrow"><span class="nm">체체비앤나 <span class="sig">SIGNATURE</span></span><span class="ds">체체크림 듬뿍 올린 아인슈페너</span><span class="pr">5,300</span></div>
+        <div class="mrow"><span class="nm">아메리카노</span><span class="ds"></span><span class="pr">3,800</span></div>
+        <div class="mrow"><span class="nm">에스프레소</span><span class="ds">시나몬 파우더 · 설탕 · 물</span><span class="pr">3,800</span></div>
+        <div class="mrow"><span class="nm">카페라떼</span><span class="ds"></span><span class="pr">4,500</span></div>
+        <div class="mrow"><span class="nm">카푸치노</span><span class="ds">시나몬 or 초코 파우더</span><span class="pr">4,500</span></div>
+        <div class="mrow"><span class="nm">바닐라라떼</span><span class="ds"></span><span class="pr">5,000</span></div>
+        <div class="mrow"><span class="nm">카라멜라떼</span><span class="ds"></span><span class="pr">5,000</span></div>
+        <div class="mrow"><span class="nm">시나몬라떼</span><span class="ds">수제 시나몬청 · 시나몬 파우더</span><span class="pr">5,000</span></div>
+      </div>
+      <div class="mcat rv">
+        <h3>Dessert</h3>
+        <div class="mrow"><span class="nm">바스크치즈케이크</span><span class="ds">한 조각</span><span class="pr">6,500</span></div>
+        <div class="mrow"><span class="nm">에그타르트</span><span class="ds"></span><span class="pr">3,500</span></div>
+        <div class="mrow"><span class="nm">휘낭시에</span><span class="ds"></span><span class="pr">2,000</span></div>
+        <div class="mrow"><span class="nm">버터떡</span><span class="ds"></span><span class="pr">1,800</span></div>
+        <h3 style="margin-top:30px">Non-coffee · Tea</h3>
+        <div class="mrow"><span class="nm">초코라떼</span><span class="ds"></span><span class="pr">5,500</span></div>
+        <div class="mrow"><span class="nm">녹차라떼</span><span class="ds"></span><span class="pr">5,500</span></div>
+        <div class="mrow"><span class="nm">캐모마일</span><span class="ds"></span><span class="pr">4,500</span></div>
+        <div class="mrow"><span class="nm">아이스티</span><span class="ds"></span><span class="pr">3,800</span></div>
+      </div>
+      <div class="mcat rv" style="grid-column:1 / -1">
+        <h3>수제청 · 에이드</h3>
+        <div class="mcats" style="gap:clamp(20px,4vw,56px)">
+          <div>
+            <div class="mrow"><span class="nm">수제 바질토마토에이드</span><span class="ds"></span><span class="pr">6,500</span></div>
+            <div class="mrow"><span class="nm">문경 오미자차</span><span class="ds">문경 오미자청</span><span class="pr">5,500</span></div>
+            <div class="mrow"><span class="nm">문경 오미자에이드</span><span class="ds">오미자청 탄산</span><span class="pr">6,000</span></div>
+            <div class="mrow"><span class="nm">생딸기라떼 <span class="sig" style="background:var(--red-d)">SEASON</span></span><span class="ds">수제 딸기청 · 시즌 한정</span><span class="pr">변동</span></div>
+          </div>
+          <div>
+            <div class="mrow"><span class="nm">수제 레몬차</span><span class="ds"></span><span class="pr">5,000</span></div>
+            <div class="mrow"><span class="nm">수제 레몬에이드</span><span class="ds"></span><span class="pr">5,500</span></div>
+            <div class="mrow"><span class="nm">수제 자몽차</span><span class="ds">수제 자몽청</span><span class="pr">5,000</span></div>
+            <div class="mrow"><span class="nm">수제 자몽에이드</span><span class="ds">자몽청 탄산</span><span class="pr">5,500</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mnote rv">디카페인 원두 변경 <b>+500원</b> · 모든 청과 시럽은 매장에서 직접 만들어요</p>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="sec gal">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Our Space</span>
+      <h2>오밀조밀 <span class="r">체체의 하루</span></h2>
+      <p>작은 공간 구석구석, 커피 한 잔과 디저트가 있는 풍경</p>
+    </div>
+    <div class="ggrid">
+      <figure class="c6 gw rv"><img src="cafe-des1.webp" alt="갓 구운 바스크 에그타르트" loading="lazy"></figure>
+      <figure class="c6 gw rv"><img src="cafe-drink1.webp" alt="크림이 올라간 체체 라떼" loading="lazy"></figure>
+      <figure class="c4 gsq rv"><img src="cafe-counter.webp" alt="꽃과 컵이 놓인 카페 카운터" loading="lazy"></figure>
+      <figure class="c4 gt rv"><img src="cafe-des2.webp" alt="딸기 바스크 치즈케이크 한 조각" loading="lazy"></figure>
+      <figure class="c4 gsq rv"><img src="cafe-beans.webp" alt="원두 그라인더와 초록 식물" loading="lazy"></figure>
+      <figure class="c8 gw rv"><img src="cafe-in3.webp" alt="따뜻한 조명의 카페 체체 창가 자리" loading="lazy"></figure>
+      <figure class="c4 gt rv"><img src="cafe-flower.webp" alt="창가에 놓인 노란 꽃" loading="lazy"></figure>
+      <figure class="c4 gsq rv"><img src="cafe-des3.webp" alt="갓 구운 마들렌" loading="lazy"></figure>
+      <figure class="c4 gt rv"><img src="cafe-drink2.webp" alt="붉은 수제청 에이드" loading="lazy"></figure>
+      <figure class="c4 gsq rv"><img src="cafe-des4.webp" alt="말린 오렌지를 올린 스콘" loading="lazy"></figure>
+      <figure class="c6 gw rv"><img src="cafe-in4.webp" alt="머그와 엽서가 놓인 나무 선반" loading="lazy"></figure>
+      <figure class="c6 gw rv"><img src="cafe-menu.webp" alt="카페 체체 메뉴판" loading="lazy"></figure>
+    </div>
+    <p class="gcap rv">사진보다 더 아늑한 공간에서 기다릴게요</p>
+  </div>
+</section>
+
+<!-- ===== VISIT ===== -->
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Visit</span>
+      <h2>오시는 <span class="r">길</span></h2>
+    </div>
+    <div class="visit-in">
+      <div class="vcard rv">
+        <div class="vrow"><div class="k">주소</div><div class="v">경기 용인시 기흥구 한보라1로 56, 102호<br><span class="muted">나산초등학교 앞 · 메디프라자 건물 1층 · 보라동 행정복지센터 옆</span></div></div>
+        <div class="vrow"><div class="k">주차</div><div class="v">건물 뒤쪽 골목길에 주차하실 수 있어요 :)</div></div>
+        <div class="vrow"><div class="k">영업<br>시간</div><div class="v"><div class="hours" id="hours">
+          <span data-d="1"><span class="d">월</span><span>09:30 – 19:00</span></span>
+          <span data-d="2"><span class="d">화</span><span>09:30 – 19:00</span></span>
+          <span data-d="3"><span class="d">수</span><span>09:30 – 19:00</span></span>
+          <span data-d="4"><span class="d">목</span><span>09:30 – 19:00</span></span>
+          <span data-d="5"><span class="d">금</span><span>09:30 – 19:00</span></span>
+          <span data-d="6"><span class="d">토</span><span>11:00 – 19:00</span></span>
+          <span data-d="0"><span class="d">일</span><span>11:00 – 19:00</span></span>
+        </div></div></div>
+        <a class="btn btn-fill vbtn" href="https://map.naver.com/p/entry/place/2048910637" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
+          네이버 지도에서 보기
+        </a>
+      </div>
+      <div class="visit-photo rv"><img src="cafe-in1.webp" alt="따뜻한 조명과 창이 있는 카페 체체 자리" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <img class="flogo" src="logo-word-cream.png" alt="cheche">
+    <p class="fadr">경기 용인시 기흥구 한보라1로 56, 102호<br>평일 09:30–19:00 · 주말 11:00–19:00</p>
+    <div class="fsoc">
+      <a href="https://www.instagram.com/cafe.cheche/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+        @cafe.cheche
+      </a>
+      <a href="https://map.naver.com/p/entry/place/2048910637" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
+        네이버 지도
+      </a>
+    </div>
+    <p class="cr">© 2026 cafe cheche. 편하게 놀러오세요 :)</p>
+  </div>
+</footer>
+
+<!-- mobile quickbar -->
+<div class="qbar">
+  <a class="qn" href="https://map.naver.com/p/entry/place/2048910637" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
+    오시는 길
+  </a>
+  <a class="qi" href="https://www.instagram.com/cafe.cheche/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+    인스타그램
+  </a>
+</div>
+
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'),tick=false;
+  function sc(){ if(tick)return; tick=true; requestAnimationFrame(function(){ hdr.classList.toggle('scrolled',window.scrollY>40); tick=false; }); }
+  window.addEventListener('scroll',sc,{passive:true}); sc();
+  var b=document.getElementById('burger'),dr=document.getElementById('drawer'),dx=document.getElementById('dx');
+  function op(){dr.classList.add('open');b.setAttribute('aria-expanded','true');}
+  function cl(){dr.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  b.addEventListener('click',op);dx.addEventListener('click',cl);
+  dr.querySelectorAll('a').forEach(function(a){a.addEventListener('click',cl);});
+  // today highlight
+  try{var day=new Date().getDay();var el=document.querySelector('#hours [data-d="'+day+'"]');if(el)el.classList.add('today');}catch(e){}
+  // desktop reveal
+  if(window.matchMedia('(min-width:861px)').matches){
+    var els=[].slice.call(document.querySelectorAll('.rv'));
+    els.forEach(function(el){el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .8s var(--ease,ease), transform .8s var(--ease,ease)';});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el);});
+    setTimeout(function(){els.forEach(function(el){if(el.style.opacity==='0'){el.style.opacity='1';el.style.transform='none';}});},2200);
+  }
+  // smooth anchor (forced, header offset)
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); if(id.length<2)return; var t=document.querySelector(id); if(!t)return;
+      e.preventDefault(); var y=t.getBoundingClientRect().top+window.scrollY-70, st=window.scrollY, d=y-st, t0=null;
+      function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/620,1);var e2=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;window.scrollTo(0,st+d*e2);if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    });
+  });
+})();
+</script>
+</body>
+</html>
