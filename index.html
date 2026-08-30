@@ -181,8 +181,12 @@ body.intro-lock{overflow:hidden}
 /* mobile quickbar */
 .qbar{display:none}
 
-/* reveal */
+/* reveal (hidden state applied pre-paint via html.js to avoid flash) */
 .rv{opacity:1}
+@media (min-width:861px){
+ html.js .rv{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+ html.js .rv.in{opacity:1;transform:none}
+}
 
 /* responsive */
 @media (max-width:860px){
@@ -214,11 +218,11 @@ footer a:focus-visible,.drawer a:focus-visible,.qbar .qn:focus-visible{outline-c
 }
 </style>
 <noscript><style>.intro-gate{display:none!important}</style></noscript>
-<script>try{if(sessionStorage.getItem('cheche_intro')==='1'||matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.className+=' intro-skip';}}catch(e){}</script>
+<script>document.documentElement.className+=' js';</script>
 </head>
 <body>
 <div class="intro-gate" id="introGate" role="presentation">
-  <video id="introVid" src="intro.mp4" poster="intro-poster.jpg" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
+  <video id="introVid" src="intro.mp4" poster="intro-poster.jpg" muted playsinline webkit-playsinline autoplay preload="auto" aria-hidden="true"></video>
   <button class="skip" id="introSkip" type="button">건너뛰기 →</button>
 </div>
 <script>
@@ -453,10 +457,9 @@ var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){setTimeout(close,1400);}
   // desktop reveal
   if(window.matchMedia('(min-width:861px)').matches){
     var els=[].slice.call(document.querySelectorAll('.rv'));
-    els.forEach(function(el){el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .8s var(--ease,ease), transform .8s var(--ease,ease)';});
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
     els.forEach(function(el){io.observe(el);});
-    setTimeout(function(){els.forEach(function(el){if(el.style.opacity==='0'){el.style.opacity='1';el.style.transform='none';}});},2200);
+    setTimeout(function(){els.forEach(function(el){el.classList.add('in');});},2200);
   }
   // smooth anchor (forced, header offset)
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
