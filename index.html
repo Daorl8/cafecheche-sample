@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light">
 <title>카페 체체 — 보라동 작은 커피·디저트 카페</title>
 <meta name="description" content="경기 용인 보라동의 작은 카페 체체(cheche). 편안한 공간과 맛있는 커피, 수제 디저트로 잠시 쉬어가세요. 체체크림라떼·바스크치즈케이크·수제청 에이드.">
-<meta name="theme-color" content="#C6392C">
+<meta name="theme-color" content="#AF4C3B">
 <meta property="og:type" content="website">
 <meta property="og:title" content="카페 체체 — 보라동 작은 커피·디저트 카페">
 <meta property="og:description" content="편안한 공간, 맛있는 커피. 잠시 쉬어가는 보라동 작은 카페 체체.">
@@ -33,7 +33,7 @@
 :root{
  --paper:#FCF8F2; --paper2:#F5EDDF; --paper3:#EFE4D2; --card:#FFFDF9;
  --ink:#3B2E29; --ink2:#7C6B60; --faint:#A99A8C;
- --red:#C6392C; --red-d:#A5302A; --red-soft:#E9C9BF;
+ --red:#AF4C3B; --red-d:#8C3A2D; --red-soft:#E3C9C0;
  --line:#EADFCE; --line2:#E0D2BC;
  --disp:'Gaegu',system-ui,'Apple SD Gothic Neo',sans-serif;
  --body:'Pretendard Variable',Pretendard,system-ui,-apple-system,'Segoe UI',sans-serif;
@@ -135,11 +135,11 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.15;letter-spacing
 
 /* ---------- gallery ---------- */
 .gal{background:var(--paper)}
-.ggrid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(10px,1.4vw,18px)}
+.ggrid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(10px,1.4vw,18px);align-items:start}
 .ggrid figure{overflow:hidden;border-radius:18px;background:var(--paper3);position:relative}
 .ggrid img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
 .ggrid figure:hover img{transform:scale(1.05)}
-.gt{aspect-ratio:4/5}.gw{aspect-ratio:3/2}.gsq{aspect-ratio:1/1}
+.gt{aspect-ratio:4/5}.g34{aspect-ratio:3/4}.gsq{aspect-ratio:1/1}
 .c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
 .gcap{text-align:center;font-family:var(--disp);font-weight:400;font-size:1.15rem;color:var(--ink2);margin-top:28px}
 
@@ -242,7 +242,7 @@ footer a:focus-visible,.drawer a:focus-visible,.qbar .qn:focus-visible{outline-c
 <section class="hero">
   <div class="wrap">
     <img class="lockup" src="logo-cheche.png" alt="카페 체체 — 커피 · 디저트">
-    <p class="tag">잠시 <b>쉬어가는</b> 작은 카페</p>
+    <p class="tag">카페 <b>체체</b></p>
     <p class="sub">보라동 골목 안, 편안한 공간과 맛있는 커피로 보답할게요. 편하게 놀러오세요 :)</p>
     <p class="meta">coffee · dessert · 용인 보라동</p>
     <div class="hero-cta">
@@ -255,9 +255,6 @@ footer a:focus-visible,.drawer a:focus-visible,.qbar .qn:focus-visible{outline-c
   </div>
 </section>
 
-<!-- ===== PHOTO BAND ===== -->
-<div class="band"><img src="cafe-store.webp" alt="카페 체체 가게 앞 — COFFEE · DESSERT 차양" loading="lazy"></div>
-
 <!-- ===== INTRO ===== -->
 <section class="sec intro" id="space">
   <div class="wrap">
@@ -265,7 +262,7 @@ footer a:focus-visible,.drawer a:focus-visible,.qbar .qn:focus-visible{outline-c
       <div class="intro-photo rv"><img src="cafe-in2.webp" alt="식물과 따뜻한 조명이 있는 카페 체체 내부" loading="lazy"></div>
       <div class="intro-txt rv">
         <span class="eyebrow">cafe cheche</span>
-        <h2>작은 가게에서<br><span class="r">천천히 쉬어가요</span></h2>
+        <h2>오늘도 체체는 문 열고 기다리고 있습니다.<br><span class="r">놀러 오세요 ☕️</span></h2>
         <p>보라동 행정복지센터 옆, 오밀조밀한 작은 카페 체체입니다. 화려하진 않지만 오래 머물고 싶은 편안한 공간과, 매일 정성껏 내리는 커피와 손수 만든 디저트로 하루의 쉼표가 되어 드릴게요.</p>
         <p class="sign">— 편하게 놀러오세요 :D</p>
       </div>
@@ -337,18 +334,20 @@ footer a:focus-visible,.drawer a:focus-visible,.qbar .qn:focus-visible{outline-c
       <p>작은 공간 구석구석, 커피 한 잔과 디저트가 있는 풍경</p>
     </div>
     <div class="ggrid">
-      <figure class="c6 gw rv"><img src="cafe-des1.webp" alt="갓 구운 바스크 에그타르트" loading="lazy"></figure>
-      <figure class="c6 gw rv"><img src="cafe-drink1.webp" alt="크림이 올라간 체체 라떼" loading="lazy"></figure>
-      <figure class="c4 gsq rv"><img src="cafe-counter.webp" alt="꽃과 컵이 놓인 카페 카운터" loading="lazy"></figure>
-      <figure class="c4 gt rv"><img src="cafe-des2.webp" alt="딸기 바스크 치즈케이크 한 조각" loading="lazy"></figure>
-      <figure class="c4 gsq rv"><img src="cafe-beans.webp" alt="원두 그라인더와 초록 식물" loading="lazy"></figure>
-      <figure class="c8 gw rv"><img src="cafe-in3.webp" alt="따뜻한 조명의 카페 체체 창가 자리" loading="lazy"></figure>
-      <figure class="c4 gt rv"><img src="cafe-flower.webp" alt="창가에 놓인 노란 꽃" loading="lazy"></figure>
+      <figure class="c4 gsq rv"><img src="cafe-des2.webp" alt="딸기 바스크 치즈케이크 한 조각" loading="lazy"></figure>
       <figure class="c4 gsq rv"><img src="cafe-des3.webp" alt="갓 구운 마들렌" loading="lazy"></figure>
+      <figure class="c4 gsq rv"><img src="cafe-flower.webp" alt="창가에 놓인 노란 꽃" loading="lazy"></figure>
+      <figure class="c4 g34 rv"><img src="cafe-des1.webp" alt="갓 구운 바스크 에그타르트" loading="lazy"></figure>
+      <figure class="c4 g34 rv"><img src="cafe-counter.webp" alt="꽃과 컵이 놓인 카페 카운터" loading="lazy"></figure>
+      <figure class="c4 g34 rv"><img src="cafe-beans.webp" alt="원두 그라인더와 초록 식물" loading="lazy"></figure>
+      <figure class="c4 gt rv"><img src="cafe-drink1.webp" alt="크림이 올라간 체체 라떼" loading="lazy"></figure>
       <figure class="c4 gt rv"><img src="cafe-drink2.webp" alt="붉은 수제청 에이드" loading="lazy"></figure>
-      <figure class="c4 gsq rv"><img src="cafe-des4.webp" alt="말린 오렌지를 올린 스콘" loading="lazy"></figure>
-      <figure class="c6 gw rv"><img src="cafe-in4.webp" alt="머그와 엽서가 놓인 나무 선반" loading="lazy"></figure>
-      <figure class="c6 gw rv"><img src="cafe-menu.webp" alt="카페 체체 메뉴판" loading="lazy"></figure>
+      <figure class="c4 gt rv"><img src="cafe-drink3.webp" alt="상큼한 수제 에이드 한 잔" loading="lazy"></figure>
+      <figure class="c4 g34 rv"><img src="cafe-in3.webp" alt="따뜻한 조명의 카페 체체 창가 자리" loading="lazy"></figure>
+      <figure class="c4 g34 rv"><img src="cafe-in4.webp" alt="머그와 엽서가 놓인 나무 선반" loading="lazy"></figure>
+      <figure class="c4 g34 rv"><img src="cafe-menu.webp" alt="카페 체체 메뉴판" loading="lazy"></figure>
+      <figure class="c6 gt rv"><img src="cafe-store.webp" alt="카페 체체 가게 앞" loading="lazy"></figure>
+      <figure class="c6 gt rv"><img src="cafe-des4.webp" alt="말린 오렌지를 올린 스콘" loading="lazy"></figure>
     </div>
     <p class="gcap rv">사진보다 더 아늑한 공간에서 기다릴게요</p>
   </div>
