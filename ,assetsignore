@@ -1,0 +1,15 @@
+.git
+.git/**
+.gitignore
+.assetsignore
+.wrangler
+wrangler.toml
+wrangler.jsonc
+node_modules
+.DS_Store
+README.md
+CHANGELOG.md
+STRUCTURE.md
+img
+img/**
+logo-cheche-cream.png
