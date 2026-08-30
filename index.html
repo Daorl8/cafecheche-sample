@@ -172,7 +172,8 @@ footer .cr{margin-top:26px;font-size:.76rem;opacity:.7}
 
 /* ---------- intro gate (splash) ---------- */
 .intro-gate{position:fixed;inset:0;z-index:200;background:#FAF6EB;display:flex;align-items:center;justify-content:center;transition:opacity .55s ease;overflow:hidden}
-.intro-gate video{width:100%;height:100%;object-fit:contain;background:#FAF6EB;transform:scale(1.025)}
+.intro-gate video{width:100%;height:100%;object-fit:cover;background:#FAF6EB;transform:scale(1.02)}
+@media (max-width:760px){.intro-gate video{object-fit:contain}}
 .intro-gate .skip{position:absolute;bottom:calc(24px + env(safe-area-inset-bottom));right:22px;font-family:var(--body);font-weight:600;font-size:.82rem;color:var(--red-d);background:rgba(255,255,255,.72);border:1px solid var(--red-soft);border-radius:100px;padding:8px 17px;cursor:pointer}
 .intro-gate.done{opacity:0;pointer-events:none}
 .intro-skip .intro-gate{display:none}
