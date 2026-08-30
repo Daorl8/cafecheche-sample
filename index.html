@@ -170,6 +170,14 @@ footer .fsoc a:hover{background:rgba(255,255,255,.26)}
 footer .fsoc svg{width:16px;height:16px}
 footer .cr{margin-top:26px;font-size:.76rem;opacity:.7}
 
+/* ---------- intro gate (splash) ---------- */
+.intro-gate{position:fixed;inset:0;z-index:200;background:#FAF6EB;display:flex;align-items:center;justify-content:center;transition:opacity .55s ease}
+.intro-gate video{width:100%;height:100%;object-fit:contain;background:#FAF6EB}
+.intro-gate .skip{position:absolute;bottom:calc(24px + env(safe-area-inset-bottom));right:22px;font-family:var(--body);font-weight:600;font-size:.82rem;color:var(--red-d);background:rgba(255,255,255,.72);border:1px solid var(--red-soft);border-radius:100px;padding:8px 17px;cursor:pointer}
+.intro-gate.done{opacity:0;pointer-events:none}
+.intro-skip .intro-gate{display:none}
+body.intro-lock{overflow:hidden}
+
 /* mobile quickbar */
 .qbar{display:none}
 
@@ -205,8 +213,23 @@ footer a:focus-visible,.drawer a:focus-visible,.qbar .qn:focus-visible{outline-c
  .btn:hover,.btn-fill:hover,.btn-ol:hover{transform:none}
 }
 </style>
+<noscript><style>.intro-gate{display:none!important}</style></noscript>
+<script>try{if(sessionStorage.getItem('cheche_intro')==='1'||matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.className+=' intro-skip';}}catch(e){}</script>
 </head>
 <body>
+<div class="intro-gate" id="introGate" role="presentation">
+  <video id="introVid" src="intro.mp4" poster="intro-poster.jpg" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
+  <button class="skip" id="introSkip" type="button">건너뛰기 →</button>
+</div>
+<script>
+(function(){var g=document.getElementById('introGate');if(!g)return;
+if(document.documentElement.className.indexOf('intro-skip')>-1){if(g.parentNode)g.remove();return;}
+var v=document.getElementById('introVid'),s=document.getElementById('introSkip'),done=false;
+document.body.classList.add('intro-lock');
+function close(){if(done)return;done=true;try{sessionStorage.setItem('cheche_intro','1');}catch(e){}g.classList.add('done');document.body.classList.remove('intro-lock');setTimeout(function(){if(g.parentNode)g.remove();},650);}
+v.addEventListener('ended',close);s.addEventListener('click',close);setTimeout(close,6800);
+var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){setTimeout(close,1400);});})();
+</script>
 <!-- ===== HEADER ===== -->
 <header class="hdr" id="hdr">
   <div class="hdr-in">
